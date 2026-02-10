@@ -7,25 +7,26 @@ import math
 from roboflow import Roboflow
 from rfdetr import RFDETRBase
 import supervision as sv
-rf = Roboflow(api_key="sjKAVuO8Lkaq5h2dDfDA")
-project = rf.workspace("fyp-vfrgn").project("veiculos-contar-dnosk")
-version = project.version(3)
-dataset = version.download("coco")
+# rf = Roboflow(api_key="sjKAVuO8Lkaq5h2dDfDA")
+# project = rf.workspace("fyp-vfrgn").project("veiculos-contar-dnosk")
+# version = project.version(3)
+# dataset = version.download("coco")
 
 model = RFDETRBase(pretrain_weights="output/checkpoint_best_total.pth")
 model.optimize_for_inference()
 
-ds = sv.DetectionDataset.from_coco(
-    images_directory_path=f"{dataset.location}/test",
-    annotations_path=f"{dataset.location}/test/_annotations.coco.json",
-)
+# ds = sv.DetectionDataset.from_coco(
+#     images_directory_path=f"{dataset.location}/test",
+#     annotations_path=f"{dataset.location}/test/_annotations.coco.json",
+# )
 # --- Setup ---
 SOURCE_VIDEO_PATH = "video/daytime.mp4"
 CONFIDENCE_THRESHOLD = 0.5
 width, height = 672, 448
 
 # Use your dataset class names
-class_names = ds.classes
+# class_names = ds.classes
+class_names = ['cars-counter', 'Bus', 'Motorcycle', 'Pickup', 'Sedan', 'Suv', 'Truck', 'Van']
 
 cap = cv2.VideoCapture(SOURCE_VIDEO_PATH)
 fps = cap.get(cv2.CAP_PROP_FPS) or 30.0
