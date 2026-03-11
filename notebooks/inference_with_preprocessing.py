@@ -2,6 +2,7 @@
 Example integration of video preprocessor with RF-DETR inference
 """
 
+import os
 import cv2
 from pathlib import Path
 from PIL import Image
@@ -13,7 +14,7 @@ from rfdetr import RFDETRBase
 model = RFDETRBase(pretrain_weights="output/checkpoint_best_total.pth")
 model.optimize_for_inference()
 
-rf = Roboflow(api_key="sjKAVuO8Lkaq5h2dDfDA")
+rf = Roboflow(api_key=os.environ.get('ROBOFLOW_API_KEY'))
 project = rf.workspace("fyp-vfrgn").project("veiculos-contar-dnosk")
 version = project.version(2)
 dataset = version.download("coco")
