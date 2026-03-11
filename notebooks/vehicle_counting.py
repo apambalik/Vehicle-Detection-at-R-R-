@@ -7,7 +7,7 @@ import math
 from roboflow import Roboflow
 from rfdetr import RFDETRBase
 import supervision as sv
-rf = Roboflow(api_key="sjKAVuO8Lkaq5h2dDfDA")
+rf = Roboflow(api_key=os.environ.get('ROBOFLOW_API_KEY'))
 project = rf.workspace("fyp-vfrgn").project("veiculos-contar-dnosk")
 version = project.version(3)
 dataset = version.download("coco")
