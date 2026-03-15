@@ -1,8 +1,7 @@
 rf_env/
 vehicle-imbalance-class-14
 7-vehicle-classses-5
-output_video/
-output_image/
+output/
 video/
 image/
 .env
