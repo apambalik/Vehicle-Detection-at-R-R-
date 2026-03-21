@@ -1,11 +1,13 @@
 rf_env/
-imbalanced-1
+yolo_env/
+.env
 imbalanced-2
 *.pth
+*.pt
 *.png
 *.jpg
 output_image/
 output_video/
 video/
 image/
-.env
+runs/
