@@ -1,8 +1,7 @@
 rf_env/
 yolo_env/
 .env
-imbalanced-2
-imbalanced-3
+7-classes-vehicle-1
 *.pth
 *.pt
 *.png
