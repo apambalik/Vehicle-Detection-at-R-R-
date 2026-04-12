@@ -6,8 +6,10 @@ yolo_env/
 *.pt
 *.png
 *.jpg
+*.ckpt
 output_image/
 output_video/
+output_small/
 video/
 image/
 runs/
