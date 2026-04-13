@@ -10,6 +10,7 @@ yolo_env/
 output_image/
 output_video/
 output_small/
+output_medium/
 video/
 image/
 runs/
