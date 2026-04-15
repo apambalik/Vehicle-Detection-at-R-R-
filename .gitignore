@@ -2,6 +2,7 @@ rf_env/
 yolo_env/
 .env
 7-classes-vehicle-1
+7-classes-vehicle-3
 *.pth
 *.pt
 *.png
